@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>VRA</groupId>
+  <artifactId>VRA</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <repositories>
+    <repository>
+        <id>wso2.releases</id>
+        <name>WSO2 internal Repository</name>
+        <url>http://maven.wso2.org/nexus/content/repositories/releases/</url>
+        <releases>
+            <enabled>true</enabled>
+            <updatePolicy>daily</updatePolicy>
+            <checksumPolicy>ignore</checksumPolicy>
+        </releases>
+    </repository>
+  </repositories>
+  
+  <dependencies>
+	  <dependency>
+    	<groupId>io.asgardeo.tomcat.oidc.agent</groupId>
+    	<artifactId>io.asgardeo.tomcat.oidc.agent</artifactId>
+    	<version>0.1.27</version>
+	  </dependency>
+	  
+	  
+  </dependencies>
+  
+  <packaging>war</packaging>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>18</release>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
